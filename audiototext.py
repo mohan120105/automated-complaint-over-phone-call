@@ -1,4 +1,4 @@
-!pip install openai-whisper
+
 import whisper
 import sqlite3
 import pandas as pd
