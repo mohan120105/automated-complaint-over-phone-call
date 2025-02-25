@@ -3,4 +3,3 @@ transformers
 spacy
 pandas
 streamlit
-python-3.9
