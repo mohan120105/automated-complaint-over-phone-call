@@ -8,7 +8,13 @@ import spacy
 import os
 
 # Load models
-whisper_model = whisper.load_model("base")  # Change to "large" for better accuracy
+
+
+# Ensure the model is downloaded
+os.system("python -m spacy download en_core_web_sm")
+
+
+whisper_model = whisper.load_model("large")  # Change to "large" for better accuracy
 classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
 nlp = spacy.load("en_core_web_sm")  # For extracting location and urgency
 
